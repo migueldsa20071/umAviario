@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+}
+a { color: inherit; 
+    align-items: center;
+} 
+.logo {
+    display: grid;
+    place-items: center;
+    height: 120px;
+    background-color: black;
+
+}
+
+.letra {
+    font-size: 100px;
+    font-style: italic;
+   
+}
+
+.aves {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+   
+
+}
+.especietiesan{
+    grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+
+}
+
+.fototiesan {
+    background-image: url("imagens/tiesangue.jpg");
+    width: 220px;
+    height: 200px;
+}
+
+.especieara{
+    grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+
+}
+
+.fotoara {
+    background-image: url("imagens/ararajuba.jpg");
+    width: 240px;
+    height: 200px;
+}
+
+.especiecorru {
+    grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+
+.fotocorru {
+    background-image: url("imagens/corruira.jpg");
+    width: 230px;
+    height: 200px;
+}
+
+.fototangara {
+    background-image: url("imagens/tangara.jpg");
+    width: 180px;
+    height: 200px;
+}
+
+.fotopitiguari {
+    background-image : url("imagens/pitiguari.jpg");
+    width :220px;
+    height: 180px;
+}
