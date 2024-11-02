@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: black;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.informacoes {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.informacoes h2 {
+    color: #333;
+}
+
+.foto-tie-sangue img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.curiosidades {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.curiosidades ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.link-voltar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.link-voltar a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.link-voltar a:hover {
+    text-decoration: underline;
+}

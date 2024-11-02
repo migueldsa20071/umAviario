@@ -1,72 +1,129 @@
-* {
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
-a { color: inherit; 
-    align-items: center;
-} 
-.logo {
-    display: grid;
-    place-items: center;
-    height: 120px;
+
+header {
     background-color: black;
-
+    padding: 20px;
+    text-align: center;
+    width: 100%;
 }
 
-.letra {
-    font-size: 100px;
-    font-style: italic;
-   
+.logo h1 {
+    color: #ffffff;
+    margin: 0;
 }
 
 .aves {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    overflow-x: auto;
    
-
 }
-.especietiesan{
-    grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 10px;
-
-}
-
-.fototiesan {
-    background-image: url("imagens/tiesangue.jpg");
-    width: 220px;
-    height: 200px;
+.aves a {
+    display: inline-block;
+    height: 300px;
+    width: 200px; /* Ajuste a largura conforme necessário */
+    transition: transform 0.3s ease; /* Transição suave para o zoom */
+    text-decoration: none; /* Remove sublinhado */
+    color: inherit; /* Mantém a cor do texto */
+ 
+    
 }
 
-.especieara{
-    grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 10px;
+/* Define o estilo das imagens para terem tamanho uniforme */
+.aves a img {
+    width: 100%; /* Define a largura como 100% do card */
+    height: 150px; /* Define uma altura fixa para todas as imagens */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço definido sem distorção */
+    border-radius: 8px; /* Mantém o mesmo border-radius do card */
+}
+
+.aves a:hover {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit; /* Faz o texto herdar a cor do pai */
+    display: block; /* Faz com que o link ocupe todo o espaço do card */
+    transform: scale(1.1);  
+    
+}
+.aves a article {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 100%;
+}
+
+
+article {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+article h2 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+article a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+article a:hover {
+    text-decoration: underline;
+    
+}
+
+.fototiesan img, .fotoara img, .fotocorru img, .fototangara img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
 
 }
 
-.fotoara {
-    background-image: url("imagens/ararajuba.jpg");
-    width: 240px;
-    height: 200px;
+footer {
+    background-color: black; /* Cor de fundo do footer */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+    position: relative; /* Pode ser útil se você precisar de posicionamento */
+    bottom: 0; /* Para ficar na parte inferior se necessário */
+    width: 100%; /* Para ocupar toda a largura */
 }
 
-.especiecorru {
-    grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 10px;
+.footer-content {
+    max-width: 1200px; /* Limita a largura do conteúdo do footer */
+    margin: 0 auto; /* Centraliza o conteúdo do footer */
 }
 
-.fotocorru {
-    background-image: url("imagens/corruira.jpg");
-    width: 230px;
-    height: 200px;
+.social-media {
+    list-style: none; /* Remove a lista padrão */
+    padding: 0; /* Remove o preenchimento padrão */
 }
 
-.fototangara {
-    background-image: url("imagens/tangara.jpg");
-    width: 180px;
-    height: 200px;
+.social-media li {
+    display: inline; /* Exibe os itens da lista na mesma linha */
+    margin: 0 10px; /* Espaçamento entre os itens */
 }
 
-.fotopitiguari {
-    background-image : url("imagens/pitiguari.jpg");
-    width :220px;
-    height: 180px;
+.social-media a {
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+
+.social-media a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
