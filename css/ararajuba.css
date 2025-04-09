@@ -1,0 +1,15 @@
+.link-voltar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.link-voltar a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.link-voltar a:hover {
+    text-decoration: underline;
+}
+    
