@@ -13,8 +13,10 @@
             <h1>Aves</h1>
         </div>
     </header>
+
     <main class="esperoquefuncione">
         <div class="aves">
+            <!-- Tiê Sangue -->
             <article class="especietiesan" id="tiesangueCard">
                 <a href="tie.html">
                     <h2>Tiê Sangue</h2>
@@ -25,16 +27,14 @@
                         Ela é nativa da Mata Atlântica no Brasil e chama a atenção pelo 
                         seu colorido vermelho vibrante.</p>
                 </a>
-            
-                <!-- Áudio do Tiê Sangue -->
                 <audio id="tiesangue-audio">
                     <source src="audio/tie-sangue.mp3" type="audio/mpeg">
                     Seu navegador não suporta o elemento de áudio.
                 </audio>
             </article>
-            
+
             <!-- Ararajuba -->
-            <article class="especieara" id ="ararajubaCard">
+            <article class="especieara" id="ararajubaCard">
                 <a href="ararajuba.html">
                     <h2>Ararajuba</h2>
                     <div class="fotoara">
@@ -59,12 +59,12 @@
                 </a>
             </article>
 
-             <!-- Tangara -->
+            <!-- Tangará -->
             <article class="especietangara">
                 <a href="tangara.html">
-                    <h2>Tangara</h2>
+                    <h2>Tangará</h2>
                     <div class="fototangara">
-                        <img src="imagens/tangara.jpg" alt="Tangara">
+                        <img src="imagens/tangara.jpg" alt="Tangará">
                     </div>
                     <p>O tangará (Tangara seledon), descrito em 1766, é uma ave colorida da Mata Atlântica brasileira, com penas verdes, azuis e pretas.</p>
                 </a>
@@ -82,6 +82,7 @@
             </article>
         </div>
     </main>
+
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Guia de Aves. Todos os direitos reservados.</p>
@@ -92,67 +93,7 @@
         </div>
     </footer>
 
-    <script>
-        // Seleciona o card do Tiê Sangue e o áudio
-        const tiesangueCard = document.getElementById('tiesangueCard');
-        const tiesangueAudio = document.getElementById('tiesangue-audio');
-        let soundEnabled = false;
-
-        // Função para habilitar o som na primeira interação do usuário
-        function enableSoundOnInteraction() {
-            soundEnabled = true;
-            document.removeEventListener('click', enableSoundOnInteraction);
-            document.removeEventListener('scroll', enableSoundOnInteraction);
-        }
-
-        // Ativa o som ao detectar a primeira interação (clique ou rolagem)
-        document.addEventListener('click', enableSoundOnInteraction);
-        document.addEventListener('scroll', enableSoundOnInteraction);
-
-        // Função para tocar o áudio ao passar o mouse, se o som estiver ativado
-        tiesangueCard.addEventListener('mouseenter', () => {
-            if (soundEnabled) {
-                tiesangueAudio.play();
-            }
-        });
-
-        // Pausar o áudio e reiniciar ao tirar o mouse
-        tiesangueCard.addEventListener('mouseleave', () => {
-            tiesangueAudio.pause();
-            tiesangueAudio.currentTime = 0; // Reinicia o áudio para o começo
-        });
-
-        // Seleciona o card da Ararajuba e o áudio
-const ararajubaCard = document.getElementById('ararajubaCard');
-const ararajubaAudio = document.getElementById('ararajuba-audio');
-let ararajubaSoundEnabled = false;
-
-// Função para habilitar o som na primeira interação do usuário
-function enableSoundOnInteraction() {
-    soundEnabled = true;
-    document.removeEventListener('click', enableSoundOnInteraction);
-    document.removeEventListener('scroll', enableSoundOnInteraction);
-}
-
-// Ativa o som ao detectar a primeira interação (clique ou rolagem)
-document.addEventListener('click', enableSoundOnInteraction);
-document.addEventListener('scroll', enableSoundOnInteraction);
-
-// Função para tocar o áudio ao passar o mouse, se o som estiver ativado
-ararajubaCard.addEventListener('mouseenter', () => {
-    if (soundEnabled) {
-        ararajubaAudio.play();
-    }
-});
-
-// Pausar o áudio e reiniciar ao tirar o mouse
-ararajubaCard.addEventListener('mouseleave', () => {
-    ararajubaAudio.pause();
-    ararajubaAudio.currentTime = 0; // Reinicia o áudio para o começo
-});
-
-
-        
-    </script>
+    <!-- Arquivo JS externo -->
+    <script src="js/script.js"></script>
 </body>
 </html>
