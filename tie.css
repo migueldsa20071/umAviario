@@ -1,3 +1,4 @@
+/* Reset básico */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,6 +6,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Cabeçalho */
 header {
     background-color: black;
     color: #ffffff;
@@ -12,11 +14,16 @@ header {
     text-align: center;
 }
 
+/* Área principal */
 main {
     padding: 20px;
 }
 
-.informacoes {
+/* Seções de informação */
+.todasinformacoes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -24,21 +31,33 @@ main {
     padding: 15px;
 }
 
-.informacoes h2 {
+.informacoes,
+.outrasinformacoes {
+    flex: 1;
+    min-width: 280px;
+}
+
+.informacoes h2,
+.outrasinformacoes h2 {
     color: #333;
 }
 
-.foto-tie-sangue img {
-    width: 300px;
+/* Imagens */
+.foto-tie-sangue img,
+.foto-habitat-tie img {
+    width: 100%;
+    max-width: 300px;
     height: auto;
     border-radius: 5px;
 }
 
+/* Curiosidades */
 .curiosidades {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
+    margin-bottom: 20px;
 }
 
 .curiosidades ul {
@@ -46,6 +65,7 @@ main {
     padding-left: 20px;
 }
 
+/* Link voltar */
 .link-voltar {
     margin-top: 20px;
     text-align: center;

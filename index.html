@@ -34,7 +34,7 @@
             </article>
             
             <!-- Ararajuba -->
-            <article class="especieara">
+            <article class="especieara" id ="ararajubaCard">
                 <a href="ararajuba.html">
                     <h2>Ararajuba</h2>
                     <div class="fotoara">
@@ -42,6 +42,10 @@
                     </div>
                     <p>A ararajuba, descrita em 1788, é uma ave amarela da Amazônia brasileira, encontrada no Pará e Maranhão.</p>
                 </a>
+                <audio id="ararajuba-audio">
+                    <source src="audio/ararajuba.mp3" type="audio/mpeg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
             </article>
 
             <!-- Corruíra -->
@@ -117,6 +121,38 @@
             tiesangueAudio.pause();
             tiesangueAudio.currentTime = 0; // Reinicia o áudio para o começo
         });
+
+        // Seleciona o card da Ararajuba e o áudio
+const ararajubaCard = document.getElementById('ararajubaCard');
+const ararajubaAudio = document.getElementById('ararajuba-audio');
+let ararajubaSoundEnabled = false;
+
+// Função para habilitar o som na primeira interação do usuário
+function enableSoundOnInteraction() {
+    soundEnabled = true;
+    document.removeEventListener('click', enableSoundOnInteraction);
+    document.removeEventListener('scroll', enableSoundOnInteraction);
+}
+
+// Ativa o som ao detectar a primeira interação (clique ou rolagem)
+document.addEventListener('click', enableSoundOnInteraction);
+document.addEventListener('scroll', enableSoundOnInteraction);
+
+// Função para tocar o áudio ao passar o mouse, se o som estiver ativado
+ararajubaCard.addEventListener('mouseenter', () => {
+    if (soundEnabled) {
+        ararajubaAudio.play();
+    }
+});
+
+// Pausar o áudio e reiniciar ao tirar o mouse
+ararajubaCard.addEventListener('mouseleave', () => {
+    ararajubaAudio.pause();
+    ararajubaAudio.currentTime = 0; // Reinicia o áudio para o começo
+});
+
+
+        
     </script>
 </body>
 </html>
