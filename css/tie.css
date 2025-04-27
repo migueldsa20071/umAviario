@@ -1,82 +1,78 @@
-/* Reset básico */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
 }
 
-/* Cabeçalho */
 header {
-    background-color: black;
-    color: #ffffff;
-    padding: 20px;
+    background-color: #000;
+    color: white;
+    padding: 20px 0;
     text-align: center;
 }
 
-/* Área principal */
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
 main {
-    padding: 20px;
+    padding: 30px;
 }
 
-/* Seções de informação */
 .todasinformacoes {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.informacoes, .outrasinformacoes, .curiosidades {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+img {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 15px;
+    margin-bottom: 15px;
 }
 
-.informacoes,
-.outrasinformacoes {
-    flex: 1;
-    min-width: 280px;
-}
-
-.informacoes h2,
-.outrasinformacoes h2 {
+h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
     color: #333;
 }
 
-/* Imagens */
-.foto-tie-sangue img,
-.foto-habitat-tie img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 5px;
+p, li {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
 }
 
-/* Curiosidades */
-.curiosidades {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    margin-bottom: 20px;
-}
-
-.curiosidades ul {
-    list-style-type: disc;
+ul {
     padding-left: 20px;
 }
 
-/* Link voltar */
 .link-voltar {
-    margin-top: 20px;
     text-align: center;
 }
 
 .link-voltar a {
+    display: inline-block;
+    background-color: #000;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
     text-decoration: none;
-    color: #007bff;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .link-voltar a:hover {
-    text-decoration: underline;
+    background-color: #444;
 }
