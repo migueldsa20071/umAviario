@@ -1,15 +1,18 @@
 .link-voltar {
-    margin-top: 20px;
     text-align: center;
 }
 
 .link-voltar a {
+    display: inline-block;
+    background-color: #000;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
     text-decoration: none;
-    color: #007bff;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .link-voltar a:hover {
-    text-decoration: underline;
+    background-color: #444;
 }
-    
